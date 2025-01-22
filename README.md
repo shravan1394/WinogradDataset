@@ -18,3 +18,4 @@ Each image pair visually looks very similar, but when asked to describe it, peop
 This work also introduces a new quantitative approach to measure the contribution of an object to scene understanding by assessing the impact of deleting each object from the image on the scene description relative to the gold standard description. We show an example of our procedure to determine the object most critical to understanding the scene.
 
 ![Alt text](/ReadMeFiles/ObjectErasure Procedure.png?raw=true "Optional Title")
+![Alt text](/ReadMeFiles/ObjectErasureProcedure.png?raw=true "Optional Title")
