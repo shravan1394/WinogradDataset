@@ -5,8 +5,10 @@ This study aims to understand how humans explore scenes while freely viewing sce
 
 The Winograd Images and the corresponding measured/predicted fixation heatmaps can be found here (HYPERLINK will be added)
 
-## Accessing Eye movement Data
+Please cite "[The Curious Mind: Eye Movements to Maximize Scene Understanding.](https://osf.io/preprints/psyarxiv/6c8gf?raw=true)” when using this dataset
 
+## Accessing Eye movement Data
+Eye movements were collected for four different conditions as part of the study. Each condition was associated with a specific task (Free viewing, Scene description, Object search and Counting objects). We provide access to all the eye movement data collected as part of this study. 
 ### Dependencies
 Please install the following
 1. Python 3.6 or above
