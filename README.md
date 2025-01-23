@@ -1,8 +1,19 @@
-# Winograd Dataset 
-The dataset used for the paper, "[The Curious Mind: Eye Movements to Maximize Scene Understanding.](https://osf.io/preprints/psyarxiv/6c8gf?raw=true)” 
+# Winograd Images: Eyemovement Dataset 
+The eyemovement dataset is collected as part of the paper, "[The Curious Mind: Eye Movements to Maximize Scene Understanding.](https://osf.io/preprints/psyarxiv/6c8gf?raw=true)” 
 
-## Motivation
-This study aims to understand how humans explore scenes while freely viewing scenes. To this end, we provide experimental evidence for a new theory. During free viewing (no instructions), humans aim to extract visual information to understand a scene, and their eye movements have a functional importance and are directed to objects that provide an accurate understanding of the scene. We show empirical evidence that humans direct their eyes most frequently to objects that are critical to the understanding of the scene, even if these are not the most salient, nor judged to be the most meaningful object (meaning maps), nor gazed at or to be grasped by an agent in the scene.  The theory might seem intuitive, but providing a strong scientific theory and empirical evidence has been difficult due to many obstacles: lack of methods to objectively and quantitatively measure the contribution of an object or scene region to scene understanding, no methods to create images that dissociate saliency, local meaningfulness judgments (meaning maps) from relevance to scene understanding, no experimental designs to demonstrate that eye movements during free viewing have functional value to accurately understanding scenes.
+This study aims to understand how humans explore scenes while freely viewing scenes. We have developed a dataset that dissociates low-level saliency ([GBVS](http://papers.neurips.cc/paper/3095-graph-based-visual-saliency.pdf?raw=true)) and locally meaningfully regions ([Meaning Maps](https://jov.arvojournals.org/article.aspx?articleid=2685927?raw=true)) from regions important to understand a scene. We call them the Winograd Image pairs, inspired from the [Winograd Schema Challenge](https://cs.nyu.edu/~davise/papers/WinogradSchemas/WS.html) for sentences (Levesque, H et. al, 2012). Each image pair visually looks very similar, but when asked to describe it, people describe it entirely differently. This allows us to study scene understanding while preserving the low-level visual aspects.
+
+The Winograd Images and the corresponding measured/predicted fixation heatmaps can be found here (HYPERLINK will be added)
+## Accessing Eye movement Data
+
+### Dependencies
+Please install the following
+1. Python 3.6 or above
+2. numpy
+3. cv2
+4. json_lines
+
+The ExampleCodeUsage.py file provides sample code to access and plot eye movement data and generate fixation heatmaps
 
 ## Contents:
 
@@ -17,5 +28,4 @@ Each image pair visually looks very similar, but when asked to describe it, peop
 
 This work also introduces a new quantitative approach to measure the contribution of an object to scene understanding by assessing the impact of deleting each object from the image on the scene description relative to the gold standard description. We show an example of our procedure to determine the object most critical to understanding the scene.
 
-![Alt text](/ReadMeFiles/ObjectErasure Procedure.png?raw=true "Optional Title")
 ![Alt text](/ReadMeFiles/ObjectErasureProcedure.png?raw=true "Optional Title")
