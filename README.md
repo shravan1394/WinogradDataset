@@ -1,14 +1,14 @@
 # Winograd Images: Eyemovement Dataset 
 This repository provides access to the eye movement data collected as part of the paper, "[The Curious Mind: Eye Movements to Maximize Scene Understanding.](https://osf.io/preprints/psyarxiv/6c8gf?raw=true)” 
 
-This study aims to understand how humans explore scenes while freely viewing scenes. We hypothesize that people try to understand scenes when they freely view them by default. To this end, We have developed a dataset of image pairs that dissociates low-level saliency ([GBVS](http://papers.neurips.cc/paper/3095-graph-based-visual-saliency.pdf?raw=true)) and locally meaningful regions ([Meaning Maps](https://jov.arvojournals.org/article.aspx?articleid=2685927?raw=true)) from regions important to understand a scene. We call them the Winograd Image pairs, inspired by the [Winograd Schema Challenge](https://cs.nyu.edu/~davise/papers/WinogradSchemas/WS.html) for sentences (Levesque, H et. al, 2012). Each image pair visually looks very similar, but when asked to describe it, people describe it entirely differently. This allows us to study scene understanding while preserving the low-level visual aspects.
+This study aims to understand how humans explore scenes while freely viewing them. We hypothesize that people try to understand scenes when they freely view them by default. To this end, We have developed a dataset of image pairs that dissociates low-level saliency ([GBVS](http://papers.neurips.cc/paper/3095-graph-based-visual-saliency.pdf?raw=true)) and locally meaningful regions ([Meaning Maps](https://jov.arvojournals.org/article.aspx?articleid=2685927?raw=true)) from regions important to understand a scene. We call them the Winograd Image pairs, inspired by the [Winograd Schema Challenge](https://cs.nyu.edu/~davise/papers/WinogradSchemas/WS.html) for sentences (Levesque, H et. al, 2012). Each image pair visually looks very similar, but when asked to describe it, people describe it entirely differently. This allows us to study scene understanding while preserving the low-level visual aspects. We collect eye movements to the Winograd Image pairs for the four tasks (details given below).
 
-The Winograd Images and the corresponding measured/predicted fixation heatmaps can be found here (HYPERLINK will be added)
+The Winograd Image pairs and the corresponding measured/predicted fixation heatmaps can be found here (HYPERLINK will be added)
 
 Please cite "[The Curious Mind: Eye Movements to Maximize Scene Understanding.](https://osf.io/preprints/psyarxiv/6c8gf?raw=true)” when using this dataset
 
 ## Accessing Eye movement Data
-Eye movements were collected for four different conditions as part of the study. Each condition was associated with a specific task (Free viewing, Scene description, Object search and Counting objects). We provide access to all the eye movement data collected as part of this study. 
+Eye movements were collected for four different conditions as part of the study. Each condition was associated with a specific task (Free viewing, Scene description, Object search, and Counting objects). We provide access to all the eye movement data collected in this study. 
 ### Dependencies
 Please install the following
 1. Python 3.6 or above
@@ -23,21 +23,22 @@ The ExampleCodeUsage.py file provides a sample code to access and plot eye movem
 
 ## Contents:
 
-### Winograd Images: 
+### Winograd Image Pairs: 
 18 pairs in total (Set1: contains one image of each pair, Set2: contains the other image of each pair)
-Each image pair visually looks very similar, but when asked to describe it, people describe it entirely differently. This allows us to study scene understanding while preserving the low-level visual aspects. The figure below shows an example of such a stimuli pair along with the prediction heatmaps of a leading low-level saliency model ([GBVS](http://papers.neurips.cc/paper/3095-graph-based-visual-saliency.pdf?raw=true)). The descriptions given by people to the pair are completely different, while the low-level saliency predictions are similar.
+The low-level visual features of each image pair are very similar. At the same time, the information required to understand the scene for each image pair requires looking at different regions of the scene.  The figure below shows an example of such a stimuli pair along with the prediction heatmaps of a leading low-level saliency model ([GBVS](http://papers.neurips.cc/paper/3095-graph-based-visual-saliency.pdf?raw=true)). The descriptions given by people to the pair are entirely different, while the low-level saliency predictions are similar.
 
 ![Alt text](/ReadMeFiles/WinogradExample.png?raw=true "Optional Title")
 
 ### Erased Object images
 330 images in total (contains the Winograd images and all its digitally manipulated versions with one object removed in each image). All images ending with an "_0" correspond to the original unaltered image, while the rest correspond to the manipulated versions.
 
-This work also introduces a new quantitative approach to measure the contribution of an object to scene understanding by assessing the impact of deleting each object from the image on the scene description relative to the gold standard description. We show an example of our procedure to determine the object most critical to understanding the scene.
+This work also introduces a new quantitative approach to measure the contribution of an object to scene understanding by assessing the impact of deleting each object from the image on the scene description relative to the gold standard description (details about how to access these descriptions are given below). We show an example of our procedure to determine the object most critical to understanding the scene.
 
 ![Alt text](/ReadMeFiles/ObjectErasureProcedure.png?raw=true "Optional Title")
 
 ### Subject Data
 Contains all deidentified subject information, including their eye movement data collected for this study
+
 ### JSON files (all under JSONS folder)
 1. WinogradImagesJson.jsonl: contains basic information about all Winograd Image Pairs (usage could be found in the example code)
 2. ErasedObjects_Data.jsonl: contains descriptions for each object removed and gold standard descriptions (descriptions for the original unaltered images).
