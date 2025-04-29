@@ -59,9 +59,9 @@ k = 0
 
 '''
 Each map is subtracted by the lowest score (least impacted)obtained when erasing an object in the corresponding image.
-Since the background table or floor would technically also have least impact on the scene description, we would expect 
-similar score low scores if we were able to remove them too. So by doing this operation we bring the prediciton of our 
-model to the object with least mpact close to that of the background. 
+Since the background table or floor would technically also have the least impact on the scene description, we expect 
+similar score low scores if we were able to remove them, too. So, by doing this operation, we bring the predictions of our 
+model to the object with the least impact close to that of the background. 
 '''
 minVal = [4.055555555555555, 3.5555555555555554, 2.7142857142857144, 2.7777777777777777, 2.0555555555555554,
           3.0555555555555554, 1.6111111111111107, 3.2222222222222223, 1.8888888888888893, 2.6428571428571432,
@@ -112,8 +112,8 @@ with open('JSONS/ObjectsErasedData.jsonl', 'rb') as f:  # opening file in binary
             for box in boxes:
                 mapx = np.zeros(img.shape[:2], np.float64)
                 ''' 
-                To avoid the map score for each object erased to be biased by a bad description, we used median rather 
-                than mean of the ratings'''
+                To avoid the map score for each object erased being biased by a bad description, we used median rather 
+                than the mean of the ratings'''
 
                 X = np.median(item["HumanRatings"])
 
@@ -123,7 +123,7 @@ with open('JSONS/ObjectsErasedData.jsonl', 'rb') as f:  # opening file in binary
                 if P < mins:
                     mins = float(P)'''
 
-                # Object centered fixation distribution
+                # Object-centered fixation distribution (from Einhäuser et. al 2008, JOV) 
                 alpha = 0.8
                 C = [int(box[1] + box[3] / 2), int(box[0] + box[2] / 2)]
                 mapx[C[0], C[1]] += 1
