@@ -21,6 +21,11 @@ The ExampleCodeUsage.py file provides a sample code to access and plot eye movem
 ![Alt text](/ReadMeFiles/ExampleImagePair.png?raw=true "Optional Title")
 
 
+## Generating Scene Understanding Maps for the images used in our study
+The GenerateSUMap.py file provides a sample code to generate SU maps for the images used in the study. The Figure below shows an example image generated using the code.
+
+![Alt text](/ReadMeFiles/SUMapExample.png?raw=true "Optional Title")
+
 ## Contents:
 
 ### Winograd Image Pairs: 
