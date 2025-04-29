@@ -46,7 +46,7 @@ Contains all deidentified subject information, including their eye movement data
 
 ### JSON files (all under JSONS folder)
 1. WinogradImagesJson.jsonl: contains basic information about all Winograd Image Pairs (usage could be found in the example code)
-2. ErasedObjects_Data.jsonl: contains descriptions for each object removed and gold standard descriptions (descriptions for the original unaltered images).
+2. ObjectsErasedData.jsonl: contains descriptions for each object removed and gold standard descriptions (descriptions for the original unaltered images).
 3. ForcedFixationData.jsonl: contains descriptions collected while people are forced to fixate(500 ms) at locations that are critical and not critical to scene understanding. 
 
 
