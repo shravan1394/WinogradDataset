@@ -7,14 +7,18 @@ The Winograd Image pairs and the corresponding measured/predicted fixation heatm
 
 Please cite "[The Curious Mind: Eye Movements to Maximize Scene Understanding.](https://osf.io/preprints/psyarxiv/6c8gf?raw=true)” when using this dataset
 
-## Accessing Eye movement Data
-Eye movements were collected for four different conditions as part of the study. Each condition was associated with a specific task (Free viewing, Scene description, Object search, and Counting objects). We provide access to all the eye movement data collected in this study. 
-### Dependencies
+## Dependencies
 Please install the following
 1. Python 3.6 or above
 2. numpy
 3. cv2
 4. json_lines
+
+Installation time: less than 5 mins
+
+## Accessing Eye movement Data
+Eye movements were collected for four different conditions as part of the study. Each condition was associated with a specific task (Free viewing, Scene description, Object search, and Counting objects). We provide access to all the eye movement data collected in this study. 
+
 
 The ExampleCodeUsage.py file provides a sample code to access and plot eye movement data and generate fixation heatmaps. The Figure below shows an example image pair with the heat maps generated using the code.
 
@@ -22,7 +26,7 @@ The ExampleCodeUsage.py file provides a sample code to access and plot eye movem
 
 
 ## Generating Scene Understanding Maps for the images used in our study
-The GenerateSUMap.py file provides a sample code to generate SU maps for the images used in the study. The Figure below shows an example image generated using the code.
+The GenerateSUMap.py file provides a sample code to generate SU maps for the images used in the study. The Figure below shows an example image generated using the code. The code takes about 10 mins to compute the scene understanding map for 36 images in our dataset.
 
 ![Alt text](/ReadMeFiles/SUMapExample.png?raw=true "Optional Title")
 
