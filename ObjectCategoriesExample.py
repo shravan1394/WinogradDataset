@@ -31,6 +31,16 @@ def psychopy_image(path):  # Converts image to psychopy coordinates
     return background
 
 
+def get_image_dim(path):  # get image dimensions
+    img = cv2.imread(path)
+    aspectRatio = img.shape[1] / img.shape[0]
+    dim = (int(aspectRatio * IMG_HEIGHT), IMG_HEIGHT)
+    H = IMG_HEIGHT
+    W = dim[0]
+    start = [Psych2CV[0] - int(H / 2), Psych2CV[1] - int(W / 2)]
+    return start, H, W
+
+
 possibleClasses = ["Person", "TargetObject", "DeepGaze", "GBVS", "MeaningMaps", "SURelevant", "SURelevantwithPeople",
                    "SUIrrelevant", "Perceived Grasped/Looked At"]
 cls = possibleClasses[0]  # Put the class name from above for which you want to see the bounding box
@@ -48,7 +58,9 @@ with open(os.path.join('JSONS', 'WinogradImagesJson.jsonl'),
                 if cls in X[x]:
                     b = [int(a) for a in x.split(" ")]
                     img[typ] = cv2.rectangle(img[typ], b[:2], (b[0] + b[2], b[1] + b[3]),
-                                             0, thickness=3)
+                                             255, thickness=3)
 
+            start, H, W = get_image_dim(os.path.join("data", "WinogradImages", item[typ]))
+            img[typ] = img[typ][start[0]:start[0] + H, start[1]:start[1] + W, :]
             cv2.imshow(typ, img[typ])
         cv2.waitKey(0)
