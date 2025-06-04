@@ -30,6 +30,22 @@ The GenerateSUMap.py file provides a sample code to generate SU maps for the ima
 
 ![Alt text](/ReadMeFiles/SUMapExample.png?raw=true "Optional Title")
 
+
+## Visualize bounding boxes used for different object categories
+The ObjectCategoriesExample.py file provides code to access the bounding boxes to various object categories defined in the study. The object categories defined in the study are
+1. Person
+2. Search Target Object
+3. SURelevant
+4. SURelevant with predicitons to people included
+5. SUIrrelevant
+6. DeepGaze
+7. Meaning Maps
+8. GBVS
+9. Perceived Grasped/Looked At
+
+The figure below shows an example of the program's output. The code allows you to choose the category you want to visualize. The example below visualizes the bounding box over people in scenes.
+![Alt text](/ReadMeFiles/ExampleBoundingBox.png?raw=true "Optional Title")
+
 ## Contents:
 
 ### Winograd Image Pairs: 
@@ -41,7 +57,7 @@ The low-level visual features of each image pair are very similar. At the same t
 ### Erased Object images
 330 images in total (contains the Winograd images and all its digitally manipulated versions with one object removed in each image). All images ending with an "_0" correspond to the original unaltered image, while the rest correspond to the manipulated versions.
 
-This work also introduces a new quantitative approach to measure the contribution of an object to scene understanding by assessing the impact of deleting each object from the image on the scene description relative to the gold standard description (details about how to access these descriptions are given below). We show an example of our procedure to determine the object most critical to understanding the scene.
+This work also introduces a new quantitative approach to measuring an object's contribution to scene understanding by assessing the impact of deleting each object from the image on the scene description relative to the gold standard description (details about how to access these descriptions are given below). We show an example of our procedure to determine the object most critical to understanding the scene.
 
 ![Alt text](/ReadMeFiles/ObjectErasureProcedure.png?raw=true "Optional Title")
 
