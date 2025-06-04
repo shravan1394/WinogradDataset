@@ -55,7 +55,7 @@ The low-level visual features of each image pair are very similar. At the same t
 ![Alt text](/ReadMeFiles/WinogradExample.png?raw=true "Optional Title")
 
 ### Erased Object images
-330 images in total (contains the Winograd images and all its digitally manipulated versions with one object removed in each image). All images ending with an "_0" correspond to the original unaltered image, while the rest correspond to the manipulated versions.
+366 images in total (contains the Winograd images and all its digitally manipulated versions with one object removed in each image). All images ending with an "_0" correspond to the original unaltered image, while the rest correspond to the manipulated versions.
 
 This work also introduces a new quantitative approach to measuring an object's contribution to scene understanding by assessing the impact of deleting each object from the image on the scene description relative to the gold standard description (details about how to access these descriptions are given below). We show an example of our procedure to determine the object most critical to understanding the scene.
 
