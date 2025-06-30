@@ -3,7 +3,7 @@ This repository provides access to the eye movement data collected as part of th
 
 This study aims to understand how humans explore scenes while freely viewing them. We hypothesize that people try to understand scenes when they freely view them by default. To this end, We have developed a dataset of image pairs that dissociates low-level saliency ([GBVS](http://papers.neurips.cc/paper/3095-graph-based-visual-saliency.pdf?raw=true)) and locally meaningful regions ([Meaning Maps](https://jov.arvojournals.org/article.aspx?articleid=2685927?raw=true)) from regions important to understand a scene. We call them the Winograd Image pairs, inspired by the [Winograd Schema Challenge](https://cs.nyu.edu/~davise/papers/WinogradSchemas/WS.html) for sentences (Levesque, H et. al, 2012). Each image pair visually looks very similar, but when asked to describe it, people describe it entirely differently. This allows us to study scene understanding while preserving the low-level visual aspects. We collect eye movements to the Winograd Image pairs for the four tasks (details given below).
 
-The Winograd Image pairs and the corresponding measured/predicted fixation heatmaps can be found here (HYPERLINK will be added)
+The Winograd Image pairs and the corresponding measured/predicted fixation heatmaps can be found here ([link](https://data.mendeley.com/datasets/z6jb259pcd/1))
 
 Please cite "[The Curious Mind: Eye Movements to Maximize Scene Understanding.](https://osf.io/preprints/psyarxiv/6c8gf?raw=true)” when using this dataset
 
